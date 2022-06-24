@@ -22,7 +22,7 @@ library("rgdal")
 # load source file for loading nc file
 source("/lfs/home/ychen/scripts/R/function/src_function_ychen.R")
 
-ssp_run <- c("ssp245")
+ssp_run <- c("ssp585")
 # import the rain fall data
 #file.path = c("/archive/TCCIP_grid_data/rain/monthly-v4/5km/rain.1960-2018.monthly.5km-grid-v4.nc")
 #file.path = c("/lfs/home/ychen/TCCIP/rain.1960-2018.monthly.5km-grid-v4.nc")
@@ -202,8 +202,8 @@ for (iy in 1:80) { #1:81
   # make a table for a signal point longterm monthly table
     tmp.table <-  data.frame()
     pot.table <-  data.frame()
-    tmp.lon <- formatC(rain.arr$lon[ix],width=6, digits=2, format="f",flag="0")
-    tmp.lat <- formatC(rain.arr$lat[iy],width=6, digits=2, format="f",flag="0")
+    tmp.lon <- formatC(rain.arr$longitude[ix],width=6, digits=2, format="f",flag="0")
+    tmp.lat <- formatC(rain.arr$latitude[iy],width=6, digits=2, format="f",flag="0")
               
     # only for valid grid points  
     if ( is.na(rain.arr$pr[ix,iy,1]) == FALSE) {  
