@@ -63,9 +63,8 @@ d.twd97.y <- coordinates(d.twd97)[,2]
 xy.data$twd97.tm2.x <- d.twd97.x
 xy.data$twd97.tm2.y <- d.twd97.y
 
+#=== write out thhe table ===
 write.csv( xy.data, "Grid.id_lonlat.csv", row.names=FALSE, quote=FALSE)
-
-
 
 # import the mask of reserviors  
 file.path= c("/lfs/home/ychen/TCCIP/Main_Reservoirs_TCCIP.nc")
@@ -82,8 +81,6 @@ spi.phase.arr <- array(dim=c(60,81,12))
 # create monthly time stamp
 #time.stamp <- seq(from = as.Date("1960-01-01"), to = as.Date("2018-12-31"), by = "month")
 time.stamp <- seq(from = as.Date("1960-01-01"), to = as.Date("2100-12-31"), by = "month")
-
-
 
 
 ld_go <- T
