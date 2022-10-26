@@ -19,7 +19,7 @@ library("gridExtra")
 library("zoo")
 library("tidyverse")
 library("rgdal")
-library("extrafont")
+#library("extrafont")
 #font_import("/lfs/home/ychen/scripts/R/Rscripts/SPI_TCCIP/")
 #font_import()
 #fonts()
@@ -43,13 +43,13 @@ esm_names <- c("ACCESS-CM2", "ACCESS-ESM1-5","BCC-CSM2-MR", "CanESM5","CESM2",
 
 # loops for SSP runs and ESM names
 
-for (iname in 1:5)  {
-#for (irun  in 1:4)  {
-for (irun in 5:8)  {
-#for (irun in 9:12) {
-#for (irun in 13:16) {
-#for (irun in 17:20) {
-#for (irun in 21:24) {
+for (irun in 1:4)  {
+#for (iname  in 1:4)  {
+#for (iname in 5:8)  {
+#for (iname in 9:12) {
+#for (iname in 13:16) {
+#for (iname in 17:20) {
+for (iname in 21:24) {
 
 ssp_run <- ssp_runs[irun]
 esm_name <- esm_names[iname] 
